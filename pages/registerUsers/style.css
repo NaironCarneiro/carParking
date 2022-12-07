@@ -1,0 +1,168 @@
+@font-face {
+    font-family: Inter;
+    src: url(../../assets/fonts/Inter-Bold.ttf)
+  }
+
+body, html{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+}
+
+.container-img{  
+    display:flex;
+    width: 50%;
+    height: 100%;
+
+} 
+
+.container-login{
+    display: flex;
+    align-items: center;
+    background-color: #52525B;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+
+
+.container-img img{
+    width: 100%;
+    height: 100%;
+
+}
+
+.title{
+    background-color: white;
+    text-align: center;
+    width: 451px;
+    height: 40px;
+    padding: 5px;
+    margin-top: 10%;
+    border-radius: 10px;
+    margin-bottom: 10%;
+}
+
+.title span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    color: black;
+}
+
+.img-stop-car{
+    margin-top: 27px;
+    margin-bottom: 35px;
+    width: 100px;
+    height: 80px;
+}
+
+.container-user{
+    display: flex;
+    align-items: center;
+    
+}
+
+.container-user input{
+    padding-left: 28px;
+    display: flex;
+    align-items: center;
+    width: 451px;
+    height: 40px;
+    font-size: 24px;
+    background: #FFFFFF;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+.container-user img{
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.container-password{
+    margin-top: 23px;
+    display: flex;
+    align-items: center;
+}
+
+.container-password input{
+    padding-left: 28px;
+    display: flex;
+    align-items: center;
+    width: 451px;
+    height: 40px;
+    font-size: 24px;
+    background: #FFFFFF;
+    opacity: 0.8;
+    border-radius: 10px;
+}
+
+
+.container-password img{    
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.btn-login button{
+    display: flex;
+    border: none;
+    font-style: normal;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 40px;
+    font-size: 20px;
+    background:  #208a30;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-login button:hover{
+    background-color: #37B34A;
+    transition: 0.4s ease-in-out;
+}
+
+.btn-account button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    width: 180px;
+    height: 40px;
+    margin-left: 80px;
+    background: #FFFFFF;
+    opacity: 0.8;
+    color: #208a30;
+    border-radius: 20px;
+    font-style: normal;
+    font-size: 20px;
+    line-height: 39px;
+    cursor: pointer;
+}
+
+.btn-account button:hover{
+    color: #30c546;
+    transition: 0.4s ease-in-out;
+}
+
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 20%;
+}

@@ -1,0 +1,204 @@
+@font-face {
+    font-family: Inter;
+    src: url(../../assets/fonts/Inter-Bold.ttf)
+  }
+
+  @font-face {
+    font-family: Inter-extraBold;
+    src: url(../../assets/fonts/Inter-ExtraBold.ttf)
+  }
+
+body, html{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+    /* background-image: url(../../assets/images/ESTACIONE.png); */
+    background-color: #09046a;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    /* background-color: rgba(0, 0, 0,0.75); */
+    background-blend-mode: overlay;
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    position: absolute;
+    width: 500px;
+    height: 70px;
+    left: 34%;
+    top: 32px;
+    margin-bottom: 200px;
+    background: #F2F2F2;
+    border-radius: 20px;
+}
+
+.title span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: black;
+}
+
+.results{
+   display: flex;
+   justify-content: center;
+   background-color: white;
+   align-items: center;
+   width: 100%;
+   height: 40%;
+   opacity: 0.7;
+   margin-top: 100px;
+}
+
+.results .table_list{
+    border: 1px #00003c solid;
+    border-collapse: collapse;
+    width: 90%;
+    color: #00003c;
+
+}
+
+.results .table_list .line_table{
+     background-color: white;
+
+}
+
+.results .table_list .line_table th{
+    border: 1px #00003c solid;
+    padding: 4px;
+}
+
+.body_table td{
+    text-align: center;
+    border: 1px #00003c solid;
+}
+
+.body_table td .img_edit{
+    display: flex;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    padding: 2px;
+    background-color: white;
+}
+
+.body_table td .img_delete{
+    display: flex;
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    padding: 2px;
+    background-color: white;
+}
+
+.body_table td a {
+    display: inline-block;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.container-buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 6%;
+}
+
+.btn-search {
+    margin-right: 10px;
+}
+
+.btn-search button{
+    display: flex;
+    justify-content: center;
+    border: none;
+    font-style: normal;
+    font-weight: 900;
+    color: #fff;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    background: #299ea7;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-search button:hover{
+    background-color: #30bbc5;
+    transition: 0.4s ease-in-out;
+}
+
+.btn-back{
+    display: flex;
+    justify-content: center;
+    margin-left: 30px;
+}
+
+.btn-back button{
+    display: flex;
+    border: none;
+    font-style: normal;
+    justify-content: center;
+    font-weight: 900;
+    color: #000;
+    align-items: center;
+    width: 200px;
+    height: 60px;
+    font-size: 20px;
+    background-color: #acaaaa;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.btn-back button:hover{
+    background-color:  #d3d0d0;
+    transition: 0.4s ease-in-out;
+}
+
+
+.button-exit{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30px;
+    border: 1px #fff;
+    margin-top: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 70px;
+    height: 30px;
+    background-color: rgba(255, 0, 0, 0.712);
+    color: white;
+    
+}
+
+.button-exit:hover{
+    background-color: rgb(117, 21, 21);
+    transition: 0.3s ease-in-out;
+}
+
+.button-exit p{
+    text-decoration: none;
+    font-family: 'Inter';
+}
+
+

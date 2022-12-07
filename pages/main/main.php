@@ -1,0 +1,90 @@
+<?php
+require_once('../../service/connect.php');
+
+$list_result = mysqli_query($start, "SELECT * FROM register_cars  ORDER BY idregister_cars DESC ");
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lista de veículos</title>
+
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body class="body-style">
+    <div class="container">
+        <!-- <a href="http://localhost/pages/login/login.html">
+            <div class="button-exit">
+                <a>Sair</a>
+            </div>
+        </a> -->
+        <div class="title"><span>Lista de Veículos Cadastrados</span></div>
+
+        <div class="results">
+            <table class="table_list">
+                <thead>
+                    <tr class="line_table">
+                        <th scope="col">Código</th>
+                        <th scope="col">Modelo/Marca</th>
+                        <th scope="col">Nome do proprietário</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Placa</th>
+                        <th scope="col">Horário de entrada</th>
+                        <th scope="col">Horário de saída</th>
+                        <th scope="col">Ações</th>
+                    </tr>
+                </thead>          
+
+            <tbody class="body_table">
+                <?php
+                while($user_data = mysqli_fetch_assoc($list_result )){
+                    echo "<tr>";
+                    echo "<td>".$user_data['idregister_cars']."</td>";
+                    echo "<td>".$user_data['brand/model_car']."</td>";
+                    echo "<td>".$user_data['owner_name']."</td>";
+                    echo "<td>".$user_data['phone_owner']."</td>";
+                    echo "<td>".$user_data['license_plate']."</td>";
+                    echo "<td>".$user_data['entry_time']."</td>";
+                    echo "<td>".$user_data['departure_time']."</td>";
+                    echo "<td>
+                        <a href='../editCars/editCars.php?idregister_cars=$user_data[idregister_cars]'> 
+                            <img class='img_edit' src='../../assets/images/edit.png' alt='usuário'>
+                        </a>
+                        <a href='../deleteCars/deleteCars.php?idregister_cars=$user_data[idregister_cars]'> 
+                            <img class='img_delete' src='../../assets/images/delete.png' alt='usuário'>
+                        </a>
+                    </td>";
+                    echo "<tr>";
+                    
+                }
+                ?>
+            </tbody>
+
+            </table>
+
+        </div>
+
+        <div class="container-buttons">
+            <a href="http://localhost/pages/search/search.html">
+                <div class="btn-search">
+                    <button>Pesquisar veículo</button>
+                </div>
+            </a>
+            <a href="http://localhost/crud_Parkingcar/pages/login/login.php">
+                <div class="btn-back">            
+                    <button>Sair</button>
+                </div>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>
