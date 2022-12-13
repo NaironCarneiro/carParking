@@ -1,5 +1,5 @@
 <?php
 
-$start = mysqli_connect('localhost', 'root', '', 'parkingcar_bd');
+$start = mysqli_connect('localhost', 'root', '', 'car_parking');
 
 ?>

@@ -1,8 +1,9 @@
 <?php
 require_once('../../service/connect.php');
 
-$list_result = mysqli_query($start, "SELECT * FROM register_cars  ORDER BY idregister_cars DESC ");
-
+$list_result = mysqli_query($start, " SELECT distinct tbl_register.id, tbl_user.name, tbl_user.email,tbl_owner.name, tbl_owner.telephone, 
+tbl_car.brand_model, tbl_car.license_plate, tbl_register.date, tbl_register.entry_time, tbl_register.departure_time 
+ FROM tbl_user, tbl_owner, tbl_car, tbl_register WHERE tbl_register.id ");
 
 ?>
 
@@ -36,6 +37,7 @@ $list_result = mysqli_query($start, "SELECT * FROM register_cars  ORDER BY idreg
                         <th scope="col">Nome do proprietário</th>
                         <th scope="col">Telefone</th>
                         <th scope="col">Placa</th>
+                        <th scope="col">Data</th>
                         <th scope="col">Horário de entrada</th>
                         <th scope="col">Horário de saída</th>
                         <th scope="col">Ações</th>
@@ -43,21 +45,22 @@ $list_result = mysqli_query($start, "SELECT * FROM register_cars  ORDER BY idreg
                 </thead>          
 
             <tbody class="body_table">
-                <?php
-                while($user_data = mysqli_fetch_assoc($list_result )){
+                <?php                
+                while($user_data = mysqli_fetch_assoc($list_result)){
                     echo "<tr>";
-                    echo "<td>".$user_data['idregister_cars']."</td>";
-                    echo "<td>".$user_data['brand/model_car']."</td>";
-                    echo "<td>".$user_data['owner_name']."</td>";
-                    echo "<td>".$user_data['phone_owner']."</td>";
+                    echo "<td>".$user_data['id']."</td>";
+                    echo "<td>".$user_data['brand_model']."</td>";
+                    echo "<td>".$user_data['name']."</td>";
+                    echo "<td>".$user_data['telephone']."</td>";                    
                     echo "<td>".$user_data['license_plate']."</td>";
+                    echo "<td>".$user_data['date']."</td>";
                     echo "<td>".$user_data['entry_time']."</td>";
                     echo "<td>".$user_data['departure_time']."</td>";
-                    echo "<td>
-                        <a href='../editCars/editCars.php?idregister_cars=$user_data[idregister_cars]'> 
+                    echo "<td>                    
+                        <a href='../editCars/editCars.php?id=$user_data[id]'> 
                             <img class='img_edit' src='../../assets/images/edit.png' alt='usuário'>
                         </a>
-                        <a href='../deleteCars/deleteCars.php?idregister_cars=$user_data[idregister_cars]'> 
+                        <a href='../deleteCars/deleteCars.php?id=$user_data[id]'> 
                             <img class='img_delete' src='../../assets/images/delete.png' alt='usuário'>
                         </a>
                     </td>";

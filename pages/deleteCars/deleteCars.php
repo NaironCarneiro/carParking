@@ -1,17 +1,17 @@
 <?php
 
-if(!empty($_GET['idregister_cars'])){
+if(!empty($_GET['id'])){
 
     require_once('../../service/connect.php');
 
-    $id = $_GET['idregister_cars'];
+    $id = $_GET['id'];
 
     
-    $sql_edit = mysqli_query($start, "SELECT * FROM register_cars  WHERE idregister_cars=$id");
+    $sql_edit = mysqli_query($start, "SELECT * FROM tbl_register  WHERE id=$id");
     
     if($sql_edit->num_rows > 0){
 
-        $sql_delete = mysqli_query($start, "DELETE FROM register_cars  WHERE idregister_cars=$id");
+        $sql_delete = mysqli_query($start, "DELETE FROM tbl_register  WHERE id=$id");
 
     }    
     if($sql_delete == true){
