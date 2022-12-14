@@ -4,7 +4,7 @@ require_once('../../service/connect.php');
 $user_email = $_POST['email_user'];
 $user_password = $_POST['password_user'];
 
-$login_user = mysqli_query($start, "SELECT * FROM tbl_user WHERE email='$user_email' pasword = '$user_password'");
+$login_user = mysqli_query($start, "SELECT * FROM tbl_user WHERE email = '$user_email' AND password = '$user_password'");
 
 var_dump($user_email);
 

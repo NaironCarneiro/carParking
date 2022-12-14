@@ -1,9 +1,10 @@
 <?php
 require_once('../../service/connect.php');
 
-$list_result = mysqli_query($start, " SELECT distinct tbl_register.id, tbl_user.name, tbl_user.email,tbl_owner.name, tbl_owner.telephone, 
+$list_result = mysqli_query($start, " SELECT distinct tbl_register.id,tbl_owner.name, tbl_owner.telephone, 
 tbl_car.brand_model, tbl_car.license_plate, tbl_register.date, tbl_register.entry_time, tbl_register.departure_time 
- FROM tbl_user, tbl_owner, tbl_car, tbl_register WHERE tbl_register.id ");
+ FROM tbl_owner, tbl_car, tbl_register WHERE tbl_register.tbl_car_id = tbl_car.id AND tbl_register.tbl_car_tbl_owner_id = tbl_owner.id");
+ 
 
 ?>
 

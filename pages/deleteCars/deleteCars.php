@@ -10,9 +10,14 @@ if(!empty($_GET['id'])){
     $sql_edit = mysqli_query($start, "SELECT * FROM tbl_register  WHERE id=$id");
     
     if($sql_edit->num_rows > 0){
-
-        $sql_delete = mysqli_query($start, "DELETE FROM tbl_register  WHERE id=$id");
-
+        $sql_delete = mysqli_query($start, "DELETE 
+                                                tbl_register, tbl_car, tbl_owner
+                                            FROM
+                                                tbl_register 
+                                            LEFT JOIN tbl_car ON tbl_register.id = tbl_car.id
+                                            LEFT JOIN tbl_owner ON tbl_register.id = tbl_owner.id
+                                            WHERE
+                                                tbl_register.id = $id");
     }    
     if($sql_delete == true){
         echo " <script> 
