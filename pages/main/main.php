@@ -21,14 +21,9 @@ tbl_car.brand_model, tbl_car.license_plate, tbl_register.date, tbl_register.entr
 
 <body class="body-style">
     <div class="container">
-        <!-- <a href="http://localhost/pages/login/login.html">
-            <div class="button-exit">
-                <a>Sair</a>
-            </div>
-        </a> -->
         <div class="title"><span>Lista de Veículos Cadastrados</span></div>
-
         <div class="results">
+        <div class="results-container">
             <table class="table_list">
                 <thead>
                     <tr class="line_table">
@@ -73,15 +68,21 @@ tbl_car.brand_model, tbl_car.license_plate, tbl_register.date, tbl_register.entr
             </table>
 
         </div>
+        </div>
 
         <div class="container-buttons">
             <a href="http://localhost/pages/search/search.html">
-                <div class="btn-search">
-                    <button>Pesquisar veículo</button>
+                <div class="btn-report">
+                    <button>Gerar relatório</button>
                 </div>
             </a>
-            <a href="http://localhost/crud_Parkingcar/pages/login/login.php">
-                <div class="btn-back">            
+            <a href="http://localhost/crud_Parkingcar/pages/register/register.html">
+                <div class="btn-car-register">
+                    <button>Registrar</button>
+                </div>
+            </a>
+            <a href="http://localhost/crud_Parkingcar/pages/login/login.html">
+                <div class="btn-exit">            
                     <button>Sair</button>
                 </div>
             </a>

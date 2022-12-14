@@ -2,13 +2,13 @@
 
 require_once('../../service/connect.php');
 
-$brandCar = $_POST['brand_car'];
-$ownerName = $_POST['owner_name'];
-$phoneOwner = $_POST['phone_owner'];
-$entryDate = $_POST['entry_date'];
-$entryTime = $_POST['entry_time'];
-$departureTime = $_POST['departure_time']; 
-$licensePlate = $_POST['license_plate'];
+    $brandCar = $_POST['brand_car'];
+    $ownerName = $_POST['owner_name'];
+    $phoneOwner = $_POST['phone_owner'];
+    $entryDate = $_POST['entry_date'];
+    $entryTime = $_POST['entry_time'];
+    $departureTime = $_POST['departure_time'];
+    $licensePlate = $_POST['license_plate'];
 
 
 $sql_register_owner = mysqli_query($start, "INSERT INTO tbl_owner 
