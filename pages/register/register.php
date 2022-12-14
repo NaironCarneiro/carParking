@@ -11,9 +11,7 @@ require_once('../../service/connect.php');
     $licensePlate = $_POST['license_plate'];
 
 
-$sql_register_owner = mysqli_query($start, "INSERT INTO tbl_owner 
-(`name`,
-`telephone`) VALUES ('$ownerName', '$phoneOwner') ");
+$sql_register_owner = mysqli_query($start, "INSERT INTO tbl_owner (`name`,`telephone`) VALUES ('$ownerName', '$phoneOwner') ");
 
 $id_owner = $start->insert_id;
 
