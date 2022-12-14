@@ -12,10 +12,6 @@ if(isset($_POST['update'])){
         $licensePlate = $_POST['license_plate'];
         $phoneOwner = $_POST['telephone'];
 
-        // $sql_update = mysqli_query($start, "UPDATE car_parking SET `brand_model`='$brandCar',
-        // 'name' ='$ownerName', telephone='$phoneOwner', license_plate='$licensePlate', 
-        // entry_time='$entryTime', departure_time='$departureTime' WHERE id='$id'");
-
     $sql_update = mysqli_query($start, "UPDATE tbl_user, tbl_owner, tbl_car, tbl_register SET 
     tbl_owner.name='$ownerName', tbl_owner.telephone='$phoneOwner', tbl_car.brand_model='$brandCar',
      tbl_car.license_plate='$licensePlate', tbl_register.date='$entryDate',
@@ -29,10 +25,10 @@ if(isset($_POST['update'])){
             window.location.href='../main/main.php'
         </script>";
     }
-    //  else{
-    //     echo " <script> 
-    //         alert('Não foi possível atualizar os dados do veículo, tente novamente');
-    //         window.location.href='../editCars/editCars.php'
-    //     </script>";
-    // }
+     else{
+        echo " <script> 
+            alert('Não foi possível atualizar os dados do veículo, tente novamente');
+            window.location.href='../editCars/editCars.php'
+        </script>";
+    }
 ?>
