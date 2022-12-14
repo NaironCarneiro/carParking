@@ -2,7 +2,7 @@
     $host = 'localhost';
     $db   = 'car_parking';
     $user = 'root';
-    $pass = '';
+    $pass = 'admin';
 
     mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
     try{

@@ -72,17 +72,19 @@ tbl_car.brand_model, tbl_car.license_plate, tbl_register.date, tbl_register.entr
         </div>
 
         <div class="container-buttons">
-            <a href="http://localhost/pages/search/search.html">
+        
+            <a href="http://localhost/carParking/pages/relatorio/relatorio.php">
                 <div class="btn-report">
                     <button>Gerar relatório</button>
                 </div>
             </a>
-            <a href="http://localhost/crud_Parkingcar/pages/register/register.html">
+        
+            <a href="http://localhost/carParking/pages/register/register.html">
                 <div class="btn-car-register">
                     <button>Registrar</button>
                 </div>
             </a>
-            <a href="http://localhost/crud_Parkingcar/pages/login/login.html">
+            <a href="http://localhost/carParking/pages/login/login.html">
                 <div class="btn-exit">            
                     <button>Sair</button>
                 </div>

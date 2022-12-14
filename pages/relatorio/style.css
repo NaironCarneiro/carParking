@@ -1,0 +1,62 @@
+@media print {
+    @page {
+       margin-left: 0.5in;
+       margin-right: 0.5in;
+       margin-top: 0;
+       margin-bottom: 0;
+     }
+}
+
+.results .table_list{
+    border: 1px #00003c solid;
+    border-collapse: collapse;
+    width: 90%;
+    height: 100px;
+    color: #00003c;
+    margin-top: auto;
+    /* overflow-y: scroll; */
+    margin-bottom: 20px;
+}
+
+.results .table_list .line_table{
+    background-color: white;
+}
+
+.results .table_list .line_table th{
+    border: 1px #00003c solid;
+    background-color: #299ea7;
+    padding: 4px;
+    position: sticky;
+    top: 0;
+}
+
+.body_table td{
+    text-align: center;
+    border: 1px #00003c solid;
+}
+
+.body_table td .img_edit{
+    display: flex;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    padding: 2px;
+    background-color: white;
+}
+
+.body_table td .img_delete{
+    display: flex;
+    margin-left: 5px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    padding: 2px;
+    background-color: white;
+}
+
+.body_table td a {
+    display: inline-block;
+    justify-content: space-between;
+    align-items: flex-start;
+}
